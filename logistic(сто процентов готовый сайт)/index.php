@@ -11,6 +11,29 @@
 </head>
 
 <body>
+
+
+<?php
+    
+    // Данные для подключения к базе данных
+    $host = 'localhost'; // Имя хоста
+    $user = 'root'; // Имя пользователя базы данных
+    $password = ''; // Пароль пользователя базы данных
+    $dbname = 'LogisticsDB'; // Имя базы данных
+    
+    // Создаем соединение
+    $conn = mysqli_connect($host, $user, $password, $dbname);
+    
+    // Проверяем соединение
+    if (!$conn) {
+        die("Ошибка подключения: " . mysqli_connect_error());
+    }
+    
+    echo "Успешное подключение к базе данных!";
+    
+    ?>
+
+    
     <header class="header">
         <div class="logo start">
             <span>Логи</span>
